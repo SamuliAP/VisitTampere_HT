@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+  <meta charset="utf-8"/>
+  <title>VisistTampere | Tapahtumakartta</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/harj.css">
+	<script src="js/jquery-2.2.4.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/harj.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvS3AVjr8CFmcqSETca4ynv-l1l2x8pAE"></script>
+	<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+</head>
+
+<body>
+	<!-- Hakupalkki: -->
+	<ul class="haku">
+		<h1 style="padding-top: 10px; padding-left: 20px;">Hae tapahtumia</h1>
+	
+			<li class="dropdown" id="hakuAsetus">
+				<h4>Valitse kategoria:</h4>
+		  	 <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><span id="droppi">Kategoria</span>
+		  	<span class="caret"></span></button>
+		  	<ul class="dropdown-menu">
+		  	  <li><a href="#">music</a></li>
+		  	  <li><a href="#">sports</a></li>
+		  	  <li><a href="#">festival</a></li>
+		  	  <li><a href="#">entertainment</a></li>
+		  	</ul>
+			</li>
+	
+			<li class="aika" id="hakuAsetus">
+				<h4>Päivämäärä alkaen:</h4>
+	  		<p>
+	        <input id="pv" type="number" min="1" max="31" style="width: 5em"> 
+	        /
+	        </label><input id="kk" type="number" min="1" max=12 style="width: 5em; margin-top: 0">
+	        /
+	        </label><input id="vuosi" type="number" min="2016" style="width: 5em; margin: 0"><br>
+	      </p>
+	  	</li>
+	
+	  	<li id="kpl" class="btn-group" data-toggle="buttons">
+	  	  <h4>Näytä tuloksia:</h4>
+	  		<label class="btn btn-primary">
+	   		  <input type="radio" name="options" id="option1" autocomplete="off" checked> 3kpl
+	 		  </label>
+	  	  <label class="btn btn-primary">
+	   		  <input type="radio" name="options" id="option2" autocomplete="off"> 5kpl
+	  		</label>
+	  		<label class="btn btn-primary active">
+	   			 <input type="radio" name="options" id="option3" autocomplete="off"> 10kpl
+	  		</label>
+			</li>
+	
+			<li><button type="button" id="btnHaku" class="btn btn-success hae" data-loading-text="Odota 	hetki...">Hae</button> </li>
+	</ul>
+
+	<!-- Tapahtumalista: -->
+	<div class="col-sm-2" id="tapahtumat">
+		<h1>Tapahtumalista</h1>
+		<ul id="dataLista">
+		</ul>
+	</div>
+
+	<!-- Kartta -->
+	<div class="col-sm-2">
+		<h1>Tapahtumat kartalla</h1>
+		<div id="map"></div>
+		<button id="suosikit" type="button" class="btn btn-info btn-lg" 
+  	data-toggle="modal" data-target="#myModal">Näytä suosikkilista</button>
+  	<button id="omaSijainti" type="button" class="btn btn-info btn-lg">Sijaintini kartalla</button>
+	</div>
+
+	<!-- Suosikkilista: -->
+  <div class="modal fade" id="myModal" role="dialog">
+   <div class="modal-dialog modal-lg">
+  
+    <!-- Suosikkilistan sisältö: -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h2 class="modal-title">Suosikkilista</h2>
+      </div>
+      <div class="modal-body">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Sulje</button>
+      </div>
+    </div>
+    
+ 	 </div>
+ 	</div>
+
+ 	<!-- Keskustelupalsta -->
+ 	<div class="col-sm-2">
+ 		<h1>Kommenttikenttä</h1>
+ 		<div id="viestitDiv"></div>
+		<input type='text' placeholder="Käyttäjätunnus" id="kayttaja" class="form-control">
+		<input type='text' placeholder="Viesti" id="viesti" class="form-control"> 
+	</div>>
+ 	<!-- Footer: -->
+	<footer>
+		<script type="text/javascript"> 
+      document.write("Sivua on muokattu viimeksi: " + document.lastModified);
+    </script>
+		<a href="https://www.flickr.com/photos/pagedooley/7427165626/in/photostream/">~~ 
+		Background</a> by Kevin Dooley / <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>
+	</footer>
+</body>
+</html>

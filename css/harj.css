@@ -1,0 +1,164 @@
+html{max-width: 1780px}
+h4{color: white;}
+
+.hide{visibility: hidden}
+
+.valittu{color: green}
+
+.mobiili{max-height: 40vh}
+
+.btn{
+	padding: 10px; 
+	margin-top: 30px;
+	margin-right: 5px;
+}
+
+#map{
+	width: 650px;
+  height: 650px; 
+  border: solid rgba(10,10,10, 0.80) 10px;
+
+}
+
+h1{
+	color:white; 
+	margin:0;
+}
+
+body{
+	background-image: url(img/back.jpg); 
+	padding: 40px
+}
+
+footer{
+	margin: 0;
+	background: rgba(10,10,10, .6);
+	color: white;
+	width: auto;
+	clear:both;
+	float:right;
+	padding: 8px;
+	border: solid rgba(180,180,180, 0.2) 1px;
+	border-right: none;
+	border-bottom: none;
+  border-top-left-radius: 15px;
+}
+
+p{color: white; margin-bottom: 0; padding-top: 10px}
+
+p input{color: black;}
+
+div.col-sm-2{
+	padding: 30px;
+	background: rgba(10,10,10, 0.80);
+	width: 700px;
+	margin: auto;
+	margin-bottom: 30px
+}
+
+#tapahtumat{
+	margin-right: 100px;
+	width: 780px;
+	max-height: 1490px;
+}
+
+#dataLista{
+	width: 700px;
+	overflow-y: scroll; 
+}
+
+#tapahtumat h1{
+	border-bottom: solid rgba(100,100,100, 0.80) 1px;
+	padding: 10px;
+	width: 350px;
+}
+
+ul{
+	list-style-type: none;
+  margin-right: 100px;
+  max-height: 1360px;
+
+}
+
+#lista{
+	display: block;
+	border-bottom: solid rgba(100,100,100, 0.80) 2px;
+	border-right: solid white 1px;
+  padding: 10px;
+  overflow: auto;
+  color: white;
+  list-style-type: none;
+}
+.modal-body #lista{
+	background-color: black;
+}
+
+.haku li#hakuAsetus{
+	display: inline;
+	float: left;
+	margin-right: 30px;
+	margin-top: 20px;
+	padding: 10px;
+	padding-right: 30px;
+	border-right: solid white 2px;
+	height: 100px
+}
+.haku li#kpl{
+	display: inline;
+	float: left;
+	margin-right: 30px;
+	margin-top: 20px;
+	padding: 10px;
+	padding-right: 30px;
+	border-right: solid white 2px;
+	height: 100px
+}
+
+.haku{
+	height: 200px;
+	background: rgba(10,10,10, 0.80);
+	margin-bottom: 30px;
+	max-width: 1580px;
+	min-width: 1000px;
+	display:block;
+}
+
+.dropdown-toggle{
+	margin-top: 0;
+}
+
+.btn-group .btn{
+	margin-top: 0;
+}
+
+#btnHaku{
+	width: 10em;
+	margin-top: 70px
+}
+
+li a{
+	padding: 10px;
+	margin-top: 5px;
+	color: white;
+	clear:both;
+	font-size: 18px;
+	border: white solid 2px;
+	border-radius: 10px
+}
+
+#viestitDiv{
+	height: 500px;
+	width: 100%;
+	border: solid black 1px;
+	background-color: white;
+	padding: 10px;
+	overflow: auto;
+	border: solid rgba(10,10,10, 0.80) 10px;
+}
+
+.form-control{
+	display: inline-block;
+	width: 40%
+}
+
+ul .dropdown-menu{width:auto;}
